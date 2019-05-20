@@ -19,6 +19,7 @@ main{
   background: linear-gradient(to top right, #7c77c5, #110a6d);
   width: 50vw;
   height: 100vh;
+  transition: 1s ease;
 }
 td {
   text-align: center;
@@ -35,6 +36,7 @@ td {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  transition: 1s ease;
 }
 
 /* NAV */
@@ -112,6 +114,7 @@ footer {
     width: 100vw;
     max-height: 65vh;
     background: no-repeat bottom/100% url("bg-intro.svg");
+   
   }
 
   /* RIGHT SIDE */
