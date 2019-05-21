@@ -1,4 +1,4 @@
-# Fylo-Product-Pages
+# Fylo-SignUp-Page
 Practice HTML, CSS to design responsive pages.
 
 ## Tricks learned
