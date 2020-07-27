@@ -10,9 +10,11 @@
 </head>
 <body>
   <main>
-    <h1> Status </h1>
-    <div id="status"></div>
+    <h1> Status: </h1>
+    <div id="status" style="overflow-wrap: break-word;border: 1px solid red;padding: 5px;margin-bottom: 30px;"></div>
   <div id="login-buttons">
+    <h1> Click the loggin button below if the status is not connected. </h1>
+    <h1> Do NOT click the loggin button if the status is connected. </h1> 
     <button id="custom-login-button">Loggin to Facebook</button>
   </div>
        
@@ -27,7 +29,7 @@
     if(response.status === "connected") {
       document.getElementById("status").innerHTML = "Connected! Access token is: " + response.authResponse.accessToken;
     }else {
-      document.getElementById("status").innerHTML = "Please log in!";
+      document.getElementById("status").innerHTML = "Not-Connected! Please log in!";
       FB.login(function(response){
         console.log(response);
       }, {
