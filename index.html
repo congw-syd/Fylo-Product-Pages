@@ -43,22 +43,31 @@
        <footer> <a href=#>Privacy Policy</a></footer>
       </div>
   </main>
-  <div id="status"></div>
+  <div id="buttons">
+    <button type="button" id="share-button">Share</button>
+  </div>
 </body>
  
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '{your-app-id}',
+      appId      : '281977063076213',
       cookie     : true,
       xfbml      : true,
-      version    : '{api-version}'
+      version    : 'v7.0'
     });
       
     FB.AppEvents.logPageView();   
       
   };
-
+  
+  document.getElementById('share-button').addEventListener('click', function(){
+    FB.ui({
+      method: 'share',
+      href: 'https://developers.facebook.com/docs/'
+    }, function(response){});
+  });
+  
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
