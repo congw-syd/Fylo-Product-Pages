@@ -58,7 +58,10 @@
     });
       
     FB.AppEvents.logPageView();   
-      
+    
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+  });
   };
   
   document.getElementById('share-button').addEventListener('click', function(){
