@@ -43,12 +43,15 @@
        <footer> <a href=#>Privacy Policy</a></footer>
       </div>
   </main>
-  <div id="buttons">
-    <button type="button" id="share-button">Share</button>
+  <div id="status">
   </div>
 </body>
  
 <script>
+  function statusChangeCallback(response) {
+    console.log('running statusChangeCallback');
+    console.log(response);
+  }
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '281977063076213',
@@ -63,13 +66,6 @@
       statusChangeCallback(response);
   });
   };
-  
-  document.getElementById('share-button').addEventListener('click', function(){
-    FB.ui({
-      method: 'share',
-      href: 'https://developers.facebook.com/docs/'
-    }, function(response){});
-  });
   
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
