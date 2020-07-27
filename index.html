@@ -25,7 +25,7 @@
     console.log('running statusChangeCallback');
     console.log(response);
     if(response.status === "connected") {
-      document.getElementById("status").innerHTML = response;
+      document.getElementById("status").innerHTML = "Connected! Access token is: " + response.authResponse.accessToken;
     }else {
       document.getElementById("status").innerHTML = "Please log in!";
       FB.login(function(response){
