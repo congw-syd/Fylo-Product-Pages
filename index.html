@@ -54,6 +54,13 @@
     console.log(response);
     if(response.status === "connected") {
       console.log('yeah');
+      FB.api('/me', function(response) {
+          console.log('success login: ' + response.name);
+        });
+      }, {
+        scope: 'instagram_basic, pages_show_list',
+        return_scopes: true
+      });
     }else {
       console.log('please login');
       FB.login(function(response){
